@@ -2,6 +2,6 @@
   <%= link_to "New Blog Post", new_blog_post_path, class: "hover:underline, p-2 m-1 bg-gray-200 w-fit" if user_signed_in? %>
   <% @blog_posts.each do |blog_post| %>
     <h2><%= link_to blog_post.title, "/blog_posts/#{blog_post.id}", class: "underline text-yellow-700 text-2xl" %></h2>
-    <p><%= blog_post.body %></p>
+    <p><%= blog_post.content %></p>
   <% end %>
 </div>
